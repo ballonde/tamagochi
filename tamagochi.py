@@ -39,6 +39,17 @@ class Poulet(Tamagochi):
     def getEspece(self):
         return self.espece
 
+class BlobFish(Tamagochi):
+    def __init__(self,name,pv,humeur):
+        Tamagochi.__init__(self,name,pv,humeur)
+        self.espece="poulet"
+        
+    def ultralaser(self):
+        print(self.nom+" lance un ultralaser!")
+
+    def getEspece(self):
+        return self.espece
+
 class OrangOutan(Tamagochi):
     def __init__(self,name,pv,humeur):
         Tamagochi.__init__(self,name,pv,humeur)
