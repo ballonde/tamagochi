@@ -55,7 +55,7 @@ class OrangOutan(Tamagochi):
 
 tabEspece=["Chat","Poulet","OrangOutan"]
 print("Vous allez recevoir aléatoirement un animal!")
-espece=tabEspece[random.randint(0,3)]
+espece=tabEspece[random.randint(0,2)]
 
 print("Vous avez obtenue un ",espece,"! Quel est son nom?")
 nom=input()
@@ -68,7 +68,9 @@ if (espece=="OrangOutan"):
 
 print("Vous avez",animal.getName(),"un",animal.getEspece(),".")
 
-while(animal.getVie>0):
-    if (animal.getEspece()==Chat):
+while(animal.getVie()>0):
+    if (animal.getEspece()=="chat"):
         print("Les action disponible pour votre animal: 1-Griffer")
+        if (int(input())==1):
+            print("Votre chat vous griffe au visage, vous partez en pleurant.")
 
